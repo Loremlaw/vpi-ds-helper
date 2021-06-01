@@ -10,6 +10,7 @@ export class TaskComponent implements OnInit {
   @Input() public task!: Task;
   @Output() public doDelete: EventEmitter<number> = new EventEmitter<number>();
   @Output() public doToggle: EventEmitter<number> = new EventEmitter<number>();
+  @Output() public doConsult: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() { }
 

@@ -2,6 +2,7 @@
   <h1>{{task.title}}</h1>
   <button (click)="doToggle.emit(task.id)">toggle</button>
   <button (click)="doDelete.emit(task.id)">delete</button>
+  <button (click)="doConsult.emit(task.id)">consult</button>
 </div>
 
 <div *ngIf="!task">Erreur</div>

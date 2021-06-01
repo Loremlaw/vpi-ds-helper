@@ -1,14 +1,7 @@
-<form (ngSubmit)="validate()">
-  <input type="text"
-         [(ngModel)]="taskFormValue.title"
-         name="title">
-  <input type="text"
-         [(ngModel)]="taskFormValue.description"
-         name="description">
-  <button type="submit">Valider</button>
-</form>
+<app-task-form (onFormValidate)="tasksService.create($event)"></app-task-form>
 
 <app-task *ngFor="let task of tasksService.allTasks"
-          (doDelete)="tasksService.delete(task.id)"
-          (doToggle)="tasksService.toggleStatus(task.id)"
+          (doDelete)="tasksService.delete($event)"
+          (doToggle)="tasksService.toggleStatus($event)"
+          (doConsult)="router.navigate(['/details', {id: $event}])"
           [task]="task"></app-task>

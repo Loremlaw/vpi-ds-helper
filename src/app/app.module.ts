@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import {FormsModule} from "@angular/forms";
 import { TaskComponent } from './components/task/task.component';
+import { TaskFormComponent } from './components/task-form/task-form.component';
+import { TaskDetailsComponent } from './pages/task-details/task-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     TaskComponent,
+    TaskFormComponent,
+    TaskDetailsComponent,
   ],
   imports: [
     BrowserModule,

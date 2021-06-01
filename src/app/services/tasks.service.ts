@@ -1,11 +1,12 @@
 import {Injectable} from '@angular/core';
 import {Task, TaskStatus} from "../modeles/task";
+import {TaskFormValues} from "../components/task-form/task-form.component";
 
 @Injectable({
   providedIn: 'root'
 })
 export class TasksService {
-  private currentId = 0;
+  private currentId = 1;
 
   private tasks: Task[] = [];
 
@@ -20,7 +21,7 @@ export class TasksService {
   }
 
   public toggleStatus(id: number): void {
-    const task = this.tasks.find(t => t.id === id);
+    const task = this.get(id);
     if (!task) {
       console.error(`Task with : '${id}' does not exists`);
       return;
@@ -29,12 +30,17 @@ export class TasksService {
     task.status = task.status === TaskStatus.TODO ? TaskStatus.DONE : TaskStatus.TODO;
   }
 
-  public create(title: string, description: string): void {
+  public create(values: TaskFormValues): void {
     this.tasks.push({
       id: this.currentId++,
-      title,
-      description,
+      title: values.title,
+      description: values.description,
       status: TaskStatus.TODO
     });
+  }
+
+  public get(id: number): Task | undefined {
+    id = Number(id);
+    return this.tasks.find(t => this.tasks.find(t => t.id === id));
   }
 }
