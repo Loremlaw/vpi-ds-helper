@@ -1,12 +1,60 @@
 .task {
-  margin: 10px;
-  padding: 10px;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #f1f1f1;
+  transition: 300ms;
+  position: relative;
+  overflow-y: hidden;
 
   &.done {
-    background: green;
+    background: linear-gradient(-45deg, #f1f1f1 2.5%, #fff 2.5%, #fff 47.5%, #f1f1f1 47.5%, #f1f1f1 52.5%, #fff 52.5%, #fff 97.5%, #f1f1f1 97.5%);
+    background-size: 30px 30px;
+    background-position: 5px 5px;
   }
 
   &.todo {
-    background: red;
+    background: white;
+  }
+
+  h1 {
+    font-family: Calibri;
+    font-weight: 300;
+  }
+
+  .actions {
+    position: absolute;
+    display: flex;
+    bottom: -45px;
+    right: 0;
+
+    div {
+      width: 60px;
+      height: 60px;
+      margin: 0 5px;
+      display: flex;
+      justify-content: center;
+      border-radius: 20px;
+      color: white;
+      padding-top: 3px;
+      transition: 300ms;
+      cursor: pointer;
+
+      &.delete {
+        background: red;
+      }
+
+      &.consult {
+        background: #66b1b1;
+      }
+
+      &.toggle {
+        background: blueviolet;
+      }
+
+      &:hover {
+        transform: translateY(-20px);
+      }
+    }
   }
 }

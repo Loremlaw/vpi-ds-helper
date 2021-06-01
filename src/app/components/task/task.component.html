@@ -1,8 +1,10 @@
 <div *ngIf="task" class="task" [ngClass]="task.status">
   <h1>{{task.title}}</h1>
-  <button (click)="doToggle.emit(task.id)">toggle</button>
-  <button (click)="doDelete.emit(task.id)">delete</button>
-  <button (click)="doConsult.emit(task.id)">consult</button>
+  <div class="actions">
+    <div class="toggle" (click)="doToggle.emit(task.id)">T</div>
+    <div class="delete" (click)="doDelete.emit(task.id)">D</div>
+    <div class="consult" (click)="doConsult.emit(task.id)">C</div>
+  </div>
 </div>
 
 <div *ngIf="!task">Erreur</div>

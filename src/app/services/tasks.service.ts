@@ -41,6 +41,6 @@ export class TasksService {
 
   public get(id: number): Task | undefined {
     id = Number(id);
-    return this.tasks.find(t => this.tasks.find(t => t.id === id));
+    return this.tasks.find(t => t.id === id);
   }
 }

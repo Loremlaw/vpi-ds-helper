@@ -1,8 +1,10 @@
-<form (ngSubmit)="validate()">
+<form (ngSubmit)="validate()" class="form">
   <input type="text"
+         placeholder="Titre"
          [(ngModel)]="taskFormValue.title"
          name="title">
   <input type="text"
+         placeholder="Description"
          [(ngModel)]="taskFormValue.description"
          name="description">
   <button type="submit">Valider</button>
