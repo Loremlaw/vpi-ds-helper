@@ -4,4 +4,5 @@
           (doDelete)="tasksService.delete($event)"
           (doToggle)="tasksService.toggleStatus($event)"
           (doConsult)="router.navigate(['/details', {id: $event}])"
+          (doEdit)="router.navigate(['/edit', {id: $event}])"
           [task]="task"></app-task>

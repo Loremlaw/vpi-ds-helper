@@ -39,8 +39,24 @@ export class TasksService {
     });
   }
 
-  public get(id: number): Task | undefined {
+  public get(id: number | undefined): Task | undefined {
+    if (!id) {
+      console.error(`Undefined task with id '${id}'`);
+      return undefined;
+    }
     id = Number(id);
     return this.tasks.find(t => t.id === id);
+  }
+
+  public update(id: number | undefined, values: TaskFormValues | undefined): void {
+    if (!values) {
+      console.error('Values cannot be undefined');
+      return;
+    }
+    const task = this.get(id);
+    if (task) {
+      task.title = values?.title;
+      task.description = values?.description;
+    }
   }
 }

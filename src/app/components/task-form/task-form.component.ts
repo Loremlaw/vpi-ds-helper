@@ -1,8 +1,8 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 export interface TaskFormValues {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
 }
 
 @Component({
@@ -12,7 +12,7 @@ export interface TaskFormValues {
 })
 export class TaskFormComponent implements OnInit {
   @Output() public onFormValidate: EventEmitter<TaskFormValues> = new EventEmitter<TaskFormValues>();
-  public taskFormValue: TaskFormValues = {
+  @Input() public taskFormValue: TaskFormValues | undefined = {
     title: '',
     description: '',
   }
@@ -24,8 +24,10 @@ export class TaskFormComponent implements OnInit {
 
   public validate(): void {
     this.onFormValidate.emit(this.taskFormValue);
-    this.taskFormValue.title = '';
-    this.taskFormValue.description = '';
+    if (this.taskFormValue) {
+      this.taskFormValue.title = '';
+      this.taskFormValue.description = '';
+    }
   }
 
 }
