@@ -1,0 +1,7 @@
+<div *ngIf="task" class="task" [ngClass]="task.status">
+  <h1>{{task.title}}</h1>
+  <button (click)="doToggle.emit(task.id)">toggle</button>
+  <button (click)="doDelete.emit(task.id)">delete</button>
+</div>
+
+<div *ngIf="!task">Erreur</div>

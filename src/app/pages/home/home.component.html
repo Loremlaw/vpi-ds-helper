@@ -1,0 +1,14 @@
+<form (ngSubmit)="validate()">
+  <input type="text"
+         [(ngModel)]="taskFormValue.title"
+         name="title">
+  <input type="text"
+         [(ngModel)]="taskFormValue.description"
+         name="description">
+  <button type="submit">Valider</button>
+</form>
+
+<app-task *ngFor="let task of tasksService.allTasks"
+          (doDelete)="tasksService.delete(task.id)"
+          (doToggle)="tasksService.toggleStatus(task.id)"
+          [task]="task"></app-task>

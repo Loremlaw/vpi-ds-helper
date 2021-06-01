@@ -1,0 +1,12 @@
+.task {
+  margin: 10px;
+  padding: 10px;
+
+  &.done {
+    background: green;
+  }
+
+  &.todo {
+    background: red;
+  }
+}
