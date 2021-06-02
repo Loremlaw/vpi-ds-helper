@@ -12,3 +12,11 @@ Le projet d'évaluation se trouve sur votre session dans le repertoire desktop/w
 L'ensemble des consignes se trouvent dans le fichier README.md
 
 Pensez à ajouter votre nom et prénom dans le fichier README.md avant de terminer votre session. Laissez l'ensemble du projet dans le dossier "work"
+
+
+___
+
+# Conseils avant l'examen
+
+Pensez à bien étudier ce projet, à le modifier et à comprendre comment fonctionne chaque bout de code. 
+Tous les concepts que vous manipulerez durant l'examen se trouvent déjà ici.
