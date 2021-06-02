@@ -1,27 +1,14 @@
-# TP1
+Notes informations et conseils concernant l'examen
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
+Dans un premier temps ouvrez l'utilitaire "Node portable" qui se trouve sur le bureau. C'est depuis ce dernier que vous devrez exécuter l'ensemble des commandes liées à Node et à Angular.
+Lorsque vous ouvrirez cet utilitaire deux commandes vous seront proposé : 
+1 => Installation de node : Normalement ce sera déjà fait mais si ce n'est pas le cas installez la version 16.2.0 (la dernière)
+2 => Ouverture d'un terminal : C'est depuis celui-ci que vous exécuterez vos commande à partir de maintenant.
 
-## Development server
+Si le Angular cli n'est pas installé, exécutez la commande suivante :
+npm install -g @angular/cli
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Le projet d'évaluation se trouve sur votre session dans le repertoire desktop/work et se nomme "evalutation".
+L'ensemble des consignes se trouvent dans le fichier README.md
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Pensez à ajouter votre nom et prénom dans le fichier README.md avant de terminer votre session. Laissez l'ensemble du projet dans le dossier "work"
